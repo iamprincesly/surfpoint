@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+use App\Commands\Migrate;
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+# add our commands
+$application->add(new Migrate());
+
+$application->run();
