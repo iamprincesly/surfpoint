@@ -48,6 +48,7 @@ class Migrate extends Command
         $dotenv->load();
 
         $config = [
+            'userClass' => User::class,
             'db' => [
                 'dsn' => $_ENV['DB_DSN'],
                 'user' => $_ENV['DB_USER'],
